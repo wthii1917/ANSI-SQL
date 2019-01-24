@@ -1,0 +1,47 @@
+\documentclass[10pt]{article}
+%%\documentclass[format=sigconf, screen=true, review=false]{acmart}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\textwidth = 6.5 in
+\textheight = 9 in
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin = 0.0 in
+\headheight = 0.0 in
+\headsep = 0.0 in
+\parskip = 0.2in
+\parindent = 0.0in
+\pagestyle{empty}
+
+\begin{document}
+\thispagestyle{empty}
+\pagestyle{empty}
+
+\begin{center}\textsc{\Large ANSI SQL}\end{center}
+
+The American National Standards Institute (ANSI) first specified Structured Query Language (whose history, not repeated here, goes back to Chamberlain and Boyce of IBM in the early 1970s, based on Codd's relational algebra) in 1986 in SQL-86.  This standard has been updated many times, most recently in 2016 as SQL:2016.
+
+This report seeks to give a description of ANSI SQL in its current form.
+
+SQL includes many types of statements, which can informally be grouped into four sublanguages:
+\begin{enumerate}
+	\item Data Query Language (DQL), which extracts structured information from a relational database, and includes the SQL SELECT statement.
+	\item Data Definition Language (DDL), which defines and manipulates TABLES within a relational database.  In the context of SQL, DDL commands include CREATE, DROP, ALTER and TRUNCATE.
+	\item Data Control Language (DCL), which governs access to database elements in the form of user privileges.  DCL commands include GRANT and REVOKE.
+	\item Data Manipulation Language (DML), which governs the manipulation of database elements.  DML commands include SELECT INTO, INSERT INTO, UPDATE and DELETE.  (\textbf{note}: although the SELECT is properly a DQL statement, SELECT INTO is a variant allowing storage of a query result as a table, and so is a DML command).
+\end{enumerate}
+
+
+An ANSI compliant SQL database implementation (of which there are many!) must support the following commands in the same way:
+\begin{enumerate}
+	\item UPDATE
+	\item DELETE
+	\item SELECT
+	\item INSERT
+	\item WHERE
+\end{enumerate}
+
+\end{document}
